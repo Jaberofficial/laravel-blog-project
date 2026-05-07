@@ -13,5 +13,11 @@ class HomePageController extends Controller
     public function aboutMe(){
         return view("frontend.about-me");
     }
+    public function contactMe(){
+        return view("frontend.contact-me");
+    }
+    public function blogDetails(){
+        return view("frontend.blog-details");
+    }
 }
     
