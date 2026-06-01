@@ -8,3 +8,4 @@
     rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="{{ asset('frontend/css/styles.css') }}" rel="stylesheet" />
+
