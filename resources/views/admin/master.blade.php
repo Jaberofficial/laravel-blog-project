@@ -24,6 +24,8 @@
 
     @include('admin.includes.style')
 
+    @stack('extracss')
+
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -48,6 +50,8 @@
     </div>
     <!--end::App Wrapper-->
     @include('admin.includes.script')
+
+    @stack('script')
 </body>
 <!--end::Body-->
 
