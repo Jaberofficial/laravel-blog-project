@@ -5,7 +5,7 @@
         <!--begin::Copyright-->
         <strong>
           Copyright &copy; 2026&nbsp;
-          <a href="jaber-full-stack-portfolio.vercel.app" class="text-decoration-none">Admin</a>.
+          <a href="https://www.jaberofficial.me/" class="text-decoration-none">Admin</a>.
         </strong>
         All rights reserved.
         <!--end::Copyright-->

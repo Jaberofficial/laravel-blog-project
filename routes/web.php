@@ -26,6 +26,14 @@ Route::get('/admin/logout',[AdminController::class, 'logout']);
 
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
 
+Route::get('/admin/settings', [AdminController::class, 'showSettings']);
+
+Route::post('/admin/settings-update', [AdminController::class, 'updateSettings']);
+
+Route::get('/admin/contact-messages', [AdminController::class, 'showMessages']);
+
+Route::get('/admin/contact-messages/delete/{id}', [AdminController::class, 'deleteMessage']);
+
 Route::get('/admin/create-blog', [BlogController::class, 'createBlog']);
 
 Route::post('/admin/store-blog', [BlogController::class, 'storeBlog']);
