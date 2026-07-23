@@ -4,7 +4,7 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
-                                <a href="https://x.com/JaberOfficial33" target="_blank">
+                                <a href="{{ $siteSetting->twitter }}" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -12,7 +12,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.facebook.com/Jaber.ononto.02" target="_blank">
+                                <a href="{{$siteSetting->facebook }}" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -20,7 +20,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://github.com/Jaberofficial" target="_blank">
+                                <a href="{{ $siteSetting->github }}" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -28,7 +28,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Jaber's Blog Website 2026</div>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Jaber's Blog {{ date('Y') }}</div>
                     </div>
                 </div>
             </div>
