@@ -10,8 +10,8 @@ A full-featured blog website built with **Laravel 10**. It has a public front en
 
 ### Public website
 - Home page with the latest articles (title, subtitle, author, date)
-- Blog details page for each article 
-- Blog page pagination
+- Pagination for easy browsing through articles
+- Blog details page for each article
 - About page, with content managed from the admin panel
 - Contact form: visitors can send a message (name, email, phone, message)
 - Social links (Facebook, Twitter, GitHub) shown from admin settings
@@ -164,21 +164,49 @@ public/blogs/           # uploaded blog images
 
 ## 📸 Screenshots
 
-_Add screenshots here: home page, about page, contact page, blog details, admin login, dashboard, blog list, add blog, contact message list, settings._
+### Public Website
 
-```md
-![Home](screenshots/home.png)
-![About](screenshots/about.png)
-![Contact](screenshots/contact.png)
+**Home Page**
+
+![Home Page](screenshots/home.png)
+
+**About Page**
+
+![About Page](screenshots/about.png)
+
+**Contact Page**
+
+![Contact Page](screenshots/contact.png)
+
+**Blog Details**
+
 ![Blog Details](screenshots/blog-details.png)
-![Admin Login](screenshots/login.png)
-![Dashboard](screenshots/dashboard.png)
-![Blog List](screenshots/blog-list.png)
-![Add Blog](screenshots/add-blog.png)
-![Contact Message List](screenshots/contact-message-list.png)
-![Settings](screenshots/settings.png)
 
-```
+### Admin Panel
+
+**Admin Login**
+
+![Admin Login](screenshots/login.png)
+
+**Dashboard**
+
+![Dashboard](screenshots/dashboard.png)
+
+**Blog List**
+
+![Blog List](screenshots/blog-list.png)
+
+**Add Blog**
+
+![Add Blog](screenshots/add-blog.png)
+
+**Contact Messages**
+
+![Contact Messages](screenshots/contact-message-list.png)
+
+**Settings**
+
+![Settings](screenshots/settings.png)
 
 ---
 
