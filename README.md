@@ -1,66 +1,202 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Jaber's Blogs: Laravel Blog Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-featured blog website built with **Laravel 10**. It has a public front end for readers and a secure admin panel where the owner writes and manages articles, reads visitor messages, and updates the About page and social links, all without touching code.
 
-## About Laravel
+> 🎥 Demo video: https://drive.google.com/file/d/1Yf2fxGP9_OrDj_f2GaxA5QZmMDiEFl-n/view?usp=sharing
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Public website
+- Home page with the latest articles (title, subtitle, author, date)
+- Blog details page for each article 
+- Blog page pagination
+- About page, with content managed from the admin panel
+- Contact form: visitors can send a message (name, email, phone, message)
+- Social links (Facebook, Twitter, GitHub) shown from admin settings
+- Responsive design
 
-## Learning Laravel
+### Admin panel
+- Secure login (public registration is disabled)
+- Dashboard with total blogs and total messages
+- Blog management (full CRUD): add, list, edit and delete posts
+- Rich text editor (Summernote) for writing blog content
+- Cover image upload for each post
+- Contact messages inbox with delete option
+- **Settings:** update the About Me content and the Facebook, Twitter and GitHub links
+- Toast notifications for every action (success and error)
+- Form validation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🛠 Tech Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Layer | Technology |
+|-------|------------|
+| Backend | PHP 8.1+, Laravel 10 |
+| Database | MySQL |
+| Templating | Blade |
+| Front end | Bootstrap 5, Vite, Sass |
+| Admin UI | AdminLTE-style dashboard |
+| Editor | Summernote |
+| Notifications | Toastr (`yoeunes/toastr`) |
+| Auth | Laravel UI (login only) |
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 🗺 Main Routes
 
-### Premium Partners
+| Area | URL | Purpose |
+|------|-----|---------|
+| Public | `/` | Home / blog list |
+| Public | `/blog-details/{id}` | Single article |
+| Public | `/about-me` | About page |
+| Public | `/contact-me` | Contact form |
+| Admin | `/login` | Admin login |
+| Admin | `/admin/dashboard` | Dashboard |
+| Admin | `/admin/list-blog` | All blogs |
+| Admin | `/admin/create-blog` | Add new blog |
+| Admin | `/admin/contact-messages` | Visitor messages |
+| Admin | `/admin/settings` | About & social links |
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+---
 
-## Contributing
+## 🚀 Getting Started
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Requirements
+- PHP 8.1 or higher
+- Composer
+- Node.js and npm
+- MySQL (XAMPP, Laragon or similar)
 
-## Code of Conduct
+### Installation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+# 1. Clone the repository
+git clone https://github.com/Jaberofficial/laravel-blog-project.git
+cd laravel-blog-project
 
-## Security Vulnerabilities
+# 2. Install dependencies
+composer install
+npm install
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# 3. Create the environment file
+cp .env.example .env
+php artisan key:generate
+```
 
-## License
+### Database setup
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Create an empty MySQL database, then update the database settings in your `.env` file with your own details:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_user
+DB_PASSWORD=your_database_password
+```
+
+Run the migrations:
+
+```bash
+php artisan migrate
+```
+
+### Create the admin user
+
+Registration is disabled, so create the admin account with Tinker:
+
+```bash
+php artisan tinker
+```
+
+```php
+\App\Models\User::create([
+    'name'     => 'Your Name',
+    'email'    => 'your-email@example.com',
+    'password' => bcrypt('choose-a-strong-password'),
+]);
+```
+
+Then add the first settings row (this enables the About page and social links):
+
+```php
+\App\Models\Setting::create(['about_me' => 'Write something about yourself...']);
+```
+
+> If `Setting` has guarded fields, you can instead run `php artisan db:seed --class=SettingSeeder`.
+
+### Run the project
+
+```bash
+# Terminal 1
+npm run dev
+
+# Terminal 2
+php artisan serve
+```
+
+Open **http://127.0.0.1:8000** for the site and **http://127.0.0.1:8000/login** for the admin panel.
+
+---
+
+## 📁 Project Structure
+
+```
+app/
+ ├── Http/Controllers/
+ │    ├── Admin/        # AdminController, BlogController
+ │    └── Frontend/     # HomePageController
+ └── Models/            # Blog, ContactMessage, Setting, User
+database/migrations/    # blogs, settings, contact_messages, users
+resources/views/
+ ├── admin/             # dashboard, blog CRUD, settings, messages
+ ├── frontend/          # home, about, contact, blog details
+ └── auth/              # login
+routes/web.php
+public/blogs/           # uploaded blog images
+```
+
+---
+
+## 📸 Screenshots
+
+_Add screenshots here: home page, about page, contact page, blog details, admin login, dashboard, blog list, add blog, contact message list, settings._
+
+```md
+![Home](screenshots/home.png)
+![About](screenshots/about.png)
+![Contact](screenshots/contact.png)
+![Blog Details](screenshots/blog-details.png)
+![Admin Login](screenshots/login.png)
+![Dashboard](screenshots/dashboard.png)
+![Blog List](screenshots/blog-list.png)
+![Add Blog](screenshots/add-blog.png)
+![Contact Message List](screenshots/contact-message-list.png)
+![Settings](screenshots/settings.png)
+
+```
+
+---
+
+## 🔮 Planned Improvements
+- Deploy to a live server
+- Categories and tags
+- Search
+- Comments
+
+---
+
+## 👤 Author
+
+**Jaber**
+- GitHub: [@Jaberofficial](https://github.com/Jaberofficial)
+
+If you like this project, a ⭐ on the repo is much appreciated!
+
+## 📄 License
+
+This project is open-sourced under the [MIT license](https://opensource.org/licenses/MIT).
